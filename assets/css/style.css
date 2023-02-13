@@ -1,0 +1,426 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body {
+    margin: 0;
+    background: linear-gradient(0deg, hsl(0, 0%, 20%), #333333);
+    color: white;
+}
+
+main {
+    margin: 0 15vw 0 15vw;
+}
+
+/* début header */
+header {
+    width: 100%;
+    height: 7vh;
+    background: #1A8FA9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.27);
+    position: sticky;
+    top: 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 3vh;
+    letter-spacing: 0.12em;
+    z-index: 2;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+    padding: 1vh 0 0 0;
+}
+
+header li {
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+header a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+/*menu burger*/
+#menu {
+    padding: 2vh 0 0 0;
+}
+
+#menu ul {
+    padding: 0;
+}
+
+#menu li {
+    list-style: none;
+}
+
+#menu a {
+    color: #fff;
+    display: block;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+/* début image d'accueil */
+#titleBackground {
+    background-image: url(../images/resumebackground.png);
+    height: 90vh;
+    width: 100%;
+    background-size: 100%;
+}
+
+#title {
+    position: relative;
+    width: 55vw;
+    height: 20vh;
+    left: -3vw;
+    top: 35vh;
+    background: linear-gradient(270deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, 0.5) 100%);
+    backdrop-filter: blur(11.5px);
+    border-radius: 40px;
+}
+
+#titletext {
+    position: relative;
+    left: 20vw;
+    top: 4vh;
+    font-family: 'Cooper Black';
+    font-size: 2.5em;
+    line-height: 57px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+}
+
+#name {
+    text-transform: uppercase;
+}
+
+#job {
+    text-transform: capitalize;
+}
+
+/* début boutons */
+#buttons {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -5vh;
+    margin: 0 auto 0 auto
+}
+
+#buttonsbis {
+    width: 20vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon {
+    position: relative;
+}
+
+.icon a {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: inset 0px 4px 25px #000000;
+}
+
+/* début à propos */
+#about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1F5994;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 0 5vh 0 5vh;
+    margin: 0 0 10vh 0;
+    height: 40vh;
+    width: 100%;
+}
+
+#about article {
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Cooper Black';
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 29px;
+    text-align: center;
+
+}
+
+#abouttext,
+#abouttitle {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-style: medium;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 31px;
+    text-align: left;
+}
+
+#abouttitle {
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+#portrait {
+    box-shadow: -7px 7px 10px 8px #946310;
+}
+
+#portrait img {
+    object-fit: fill;
+}
+
+/* début compétences pro */
+
+#skills {
+    height: 70vh;
+    width: 100%;
+}
+
+#skillscore {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#skillstitle {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Cooper Black';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    margin: 0 0 5vh 0;
+}
+
+/*caroussel portfolio*/
+
+.portfolioimages {
+    height: 400px;
+    width: 400px;
+}
+
+.portfolioimagesclick {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carouseltexttitle {
+    color: white;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-shadow: -1px 1px 5px rgb(0 0 0 / 50%);
+}
+
+.carouseltext {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-shadow: -1px 1px 5px rgb(0 0 0 / 50%);
+}
+
+.carouselframe {
+    backdrop-filter: blur(11.5px);
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+/* expériences pro */
+
+#experiencesTitle {
+    text-align: right;
+    text-transform: uppercase;
+    font-family: 'Cooper Black';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    margin: 50px 0 50px 0;
+}
+
+.experiencePresentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: 250px;
+    background: #1F5994;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset -4px 4px 38px 12px rgba(0, 0, 0, 0.38);
+}
+
+.experienceItemLeft,
+.experienceItemRight {
+    display: flex;
+    margin: 0 0 5vh 0;
+}
+
+.experienceItemRight {
+    flex-direction: row-reverse;
+}
+
+.experienceDescription {
+    width: 80vw;
+    background: white;
+    color: #946310;
+}
+
+.period {
+    margin: 0 0 5vh 0;
+    font-family: 'Cooper Black';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #C6C5C5;
+}
+
+.company {
+    font-family: 'Cooper Black';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2em;
+    line-height: 41px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+h3 {
+    font-family: 'Cooper Black';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    color: #946310;
+}
+
+.leftTitle,
+.rightTitle {
+    text-align: center;
+    position: relative;
+    bottom: -11vh;
+}
+
+/* formations */
+
+#education {
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+
+#education img {
+    width: 100%;
+    height: auto;
+
+}
+
+#educationTitle {
+    color: white;
+    padding: 0 0 0 5vw;
+    text-transform: uppercase;
+}
+
+
+/* formulaire de contact */
+
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5vh 0 0 0;
+}
+
+#contact span {
+    text-transform: uppercase;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+form {
+    max-width: 420px;
+    margin: 50px auto;
+}
+
+.feedback-input {
+    color: white;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border: 2px solid #946310;
+    transition: all 0.3s;
+    padding: 13px;
+    margin: 0 0 15px 0;
+    width: 100%;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+.feedback-input:focus {
+    border: 2px solid #e0a746;
+}
+
+textarea {
+    height: 250px;
+    line-height: 150%;
+    resize: vertical;
+}
+
+[type="submit"] {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    background: #946310;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding: 10px 0 10px 0;
+    transition: all 0.3s;
+    margin: -4px 0 0 0;
+    font-weight: 700;
+}
+
+[type="submit"]:hover {
+    background: #e0a746;
+}
+
+/* footer */
+
+footer {
+    height: 7vh;
+    width: 100%;
+    background-color: #1A8FA9;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer button {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    background: #946310;
+    border-radius: 5px;
+    border: 2px solid #e0a746;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+}

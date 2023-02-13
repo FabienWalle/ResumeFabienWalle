@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./css/updateProjectForm.css">
+		<title>CV Fabien WALLE - ajout et mise à jour de projet</title>
+	</head>
+	<body>
+		<div id="topSide">
+			<h1>éditer les projets du portfolio</h1>
+			<div id="addProjectFrame">
+				<form action="/addProject" method="POST" id="addForm" enctype='multipart/form-data'>
+					<h2 id="title">ajouter un projet au portfolio</h2>
+					<input id="name" placeholder="Nom du projet" name="name">
+					<input id="description" placeholder="Description du projet" name="description">
+					<input id="technologies" placeholder="Technologies utilisées" name="technologies">
+					<input id="image" type="file" name="image">
+					<input id="url" placeholder="url" name="url">
+					<button type="submit">valider</button>
+				</form>
+			</div>
+			<h2 id="title">éditer un projet du portfolio</h2>
+		</div>
+		<div id="editProjectFrame">
+			{% for project in projects %}
+				<div class="projectDetails">
+					<form action="/updateProject/{{project.id}}" method="POST" id="form" enctype='multipart/form-data'>
+						<input id="name" value="{{project.name}}" name="name">
+						<input id="description" value="{{project.description}}" name="description">
+						<input id="technologies" value="{{project.technologies}}" name="technologies">
+						<label for="image">{{project.image}}</label>
+						<input type="file" id="image" name="image">
+						<input id="url" value="{{project.url}}" name="url">
+						<button type="submit">mettre à jour</button>
+					</form>
+					<div class="deleteButton">
+						<a href="/deleteProject/{{project.id}}">supprimer</a>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+
+	</body>
+</html>

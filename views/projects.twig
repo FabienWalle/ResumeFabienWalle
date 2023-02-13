@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./css/responsive.css">
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Orienta' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Copse' rel='stylesheet'>
+		<title>CV Fabien WALLE</title>
+	</head>
+	<body>
+		<header>
+			<div id="burger-menu">
+				<span></span>
+			</div>
+			<div id="menu">
+				<ul id="headerList">
+					<li>
+						<a href="#about">à propos</a>
+					</li>
+					<li>
+						<a href="#skills">compétences</a>
+					</li>
+					<li>
+						<a href="#Portfolio">portfolio</a>
+					</li>
+					<li>
+						<a href="#experiences">expériences</a>
+					</li>
+					<li>
+						<a href="#education">formations</a>
+					</li>
+					<li>
+						<a href="#contact">contact</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<div id="titleBackground">
+			<div id="title">
+				<div id="titletext">
+					<span id="name">fabien walle</span>
+					<span id="job">développeur junior</span>
+				</div>
+			</div>
+		</div>
+		<main>
+			<div id="buttons">
+				<div id="buttonsbis">
+					<div id="linkedinicon" class="icon">
+						<img src="./images/linkedinicon.png" alt="linkedinicon">
+						<a href="https://www.linkedin.com/in/fabien-walle/" target="_blank"></a>
+					</div>
+					<div id="githubicon" class="icon">
+						<img src="./images/githubicon.png" alt="githubicon">
+						<a href="https://github.com/FabienWalle" target="_blank"></a>
+					</div>
+					<div id="resumeicon" class="icon">
+						<img src="./images/resumeicon.png" alt="resumeicon">
+						<a href="./images/CV_FW_Stage.pdf" target="_blank"></a>
+					</div>
+				</div>
+			</div>
+			<section id="about">
+				<article>
+					<h2 id="abouttitle">à propos</h2>
+					<span id="abouttext">J'ai choisi l'année dernière de me reconvertir dans la programmation et le développement informatique. Je cherche activement une alternance à partir de mai 2023 dans la région d'Aix-en-Provence pour finaliser mon diplôme de "concepteur développeur d'applications". Je souhaiterais privilégier la partie back-end &#40; PHP, Symphony, Python, MongoDB, MySQL, etc. &#41; .
+					</span>
+				</article>
+				<div id="portrait">
+					<img src="./images/monportrait.jfif" alt="myface">
+				</div>
+			</section>
+			<section id="skills">
+				<h2 id="skillstitle">
+					compétences professionnelles
+				</h2>
+				<div id="skillscore">
+					<div id="frontendskills" data-aos="fade-right"><img src="./images/frontendgroup.svg" alt="frontendgroup"></div>
+					<div id="backendskills" data-aos="fade-left"><img src="./images/backendgroup.svg" alt="backendgroup"></div>
+				</div>
+			</section>
+			<div id="Portfolio" class="carousel slide" data-bs-ride="false">
+				<div class="carousel-inner">
+					{% for project in projects %}
+						<div class="carousel-item">
+							<a href="{{project.url}}" target="blank" class="portfolioimagesclick">
+								<img src="./uploads/{{project.image}}" class="portfolioimages d-block" alt="{{project.name}}">
+							</a>
+							<div class="carouselframe carousel-caption d-none d-md-block">
+								<p class="carouseltexttitle">{{project.name}}</p>
+								<p class="carouseltext">{{project.description}}</p>
+								<p class="carouseltext">{{project.technologies}}</p>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#Portfolio" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#Portfolio" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+			<section id="experiences">
+				<h2 id="experiencesTitle">expériences professionnelles</h2>
+				<article class="experienceItemLeft" data-aos="fade-right">
+					<div class="experiencePresentation">
+						<span class="period">avril 2020 - octobre 2022</span>
+						<span class="company">adsn</span>
+					</div>
+					<div class="experienceDescription">
+						<h3 class="rightTitle">administrateur chatbot anf</h3>
+					</div>
+				</article>
+				<article class="experienceItemRight" data-aos="fade-left">
+					<div class="experiencePresentation">
+						<span class="period">juillet 2017 - mars 2020</span>
+						<span class="company">adsn</span>
+					</div>
+					<div class="experienceDescription">
+						<h3 class="leftTitle">technicien qualité bases immobilières</h3>
+					</div>
+				</article>
+				<article class="experienceItemLeft" data-aos="fade-right">
+					<div class="experiencePresentation">
+						<span class="period">2016 - 2017</span>
+						<span class="company">auto-entrepreneur</span>
+					</div>
+					<div class="experienceDescription">
+						<h3 class="rightTitle">aide à l'écriture cinématographique</h3>
+					</div>
+				</article>
+				<article class="experienceItemRight" data-aos="fade-left">
+					<div class="experiencePresentation">
+						<span class="period">2010 - 2014</span>
+						<span class="company">éducation nationale</span>
+					</div>
+					<div class="experienceDescription">
+						<h3 class="leftTitle">professeur de français en collège et lycée</h3>
+					</div>
+				</article>
+			</section>
+			<div id="education">
+				<h3 id="educationTitle">formations</h3>
+				<img src="./images/formations.svg" alt="formations" data-aos="flip-left">
+			</div>
+			<div>
+				<section id="contact">
+					<span id="contactTitle">
+						<h2>contactez-moi</h2>
+					</span>
+					<form method="POST" action="/sendMail">
+						<input name="name" type="text" class="feedback-input" placeholder="Nom Prénom Entreprise"/>
+						<input name="mail" type="text" class="feedback-input" placeholder="Email"/>
+						<textarea name="message" class="feedback-input" placeholder="Votre message"></textarea>
+						<input type="submit" value="ENVOYER"/>
+					</form>
+				</section>
+			</div>
+		</main>
+		<footer>
+			<button id="scrollTop">Retour en haut de page</button>
+		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+		<script src="./js/main.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+	</body>
+</html>
