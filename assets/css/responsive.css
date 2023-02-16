@@ -167,6 +167,14 @@
 }
 
 @media (max-width: 400px) {
+    .portfolioimages {
+        height: 250px;
+        width: 250px;
+    }
+
+    .carouseltext, .carouseltexttitle {
+        width: 50vw;
+    }
 
     #frontendimage,
     #backendimage {
