@@ -199,6 +199,7 @@
 
     #Portfolio {
         margin-top: 0;
+        padding : 100px 0 0 0;
     }
 
     #name, #job {
