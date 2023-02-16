@@ -36,12 +36,6 @@
     }
 }
 
-@media (max-width:1200px) {
-    header li {
-        font-size: 1em;
-    }
-}
-
 @media (max-width: 1000px) {
 
     #titletext {
@@ -51,13 +45,21 @@
 
     #about {
         flex-direction: column-reverse;
-        height: 75vh;
+        height: 60vh;
         padding: 5vh;
+    }
+
+    #Portfolio {
+        margin: 0;
     }
 
     /*activer le menu bruger*/
     #menu {
         padding: 0 0 0 0;
+    }
+
+    #headerList {
+        flex-direction: column;
     }
 
     #burger-menu {
@@ -155,12 +157,52 @@
         margin: 0;
     }
 
-    header ul {
-        flex-wrap: wrap;
+    #titletext {
+        font-size: 1.5em;
     }
 
-    #titletext,
     #abouttext {
         font-size: 1em
     }
+}
+
+@media (max-width: 400px) {
+
+    #frontendimage,
+    #backendimage {
+        width: 98%;
+    }
+
+    body {
+        width: 100%
+    }
+
+    .rightTitle,
+    .leftTitle,
+    .period,
+    .company {
+        font-size: 15px
+    }
+
+    #portrait img {
+        width: 150px;
+        height: 150px
+    }
+
+    #Portfolio {
+        margin-top: 0;
+    }
+
+    #name, #job {
+        font-size:0.7em;
+    }
+
+    #about {
+        height:75vh;
+    }
+
+    #about article {
+        padding : 0;
+    }
+
 }
