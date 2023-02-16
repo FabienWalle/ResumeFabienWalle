@@ -71,7 +71,9 @@ header a {
     background-image: url(../images/resumebackground.png);
     height: 90vh;
     width: 100%;
-    background-size: 100%;
+    background-size:cover;
+    background-repeat: no-repeat;
+
 }
 
 #title {
