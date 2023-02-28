@@ -28,7 +28,7 @@ projectRouter.post('/sendMail', async (req, res) => {
             subject: req.body.name,
             text: `Mail de l'émetteur:\n\n${(req.body.mail)}\n\nMessage de l'émetteur:\n\n${(req.body.message)}`,
         });
-        res.redirect('/projects')
+        res.redirect('/')
     } catch (err) {
         res.send(err)
     }
